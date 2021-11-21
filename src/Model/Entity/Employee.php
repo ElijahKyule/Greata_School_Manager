@@ -1,0 +1,61 @@
+<?php
+declare(strict_types=1);
+
+namespace App\Model\Entity;
+
+use Cake\ORM\Entity;
+
+/**
+ * Employee Entity
+ *
+ * @property int $id
+ * @property string $name
+ * @property string $email
+ * @property string $phone_number
+ * @property string $address
+ * @property int $gender_id
+ * @property \Cake\I18n\FrozenDate $date_of_birth
+ * @property string $qualifications
+ * @property string $salary_amount
+ * @property \Cake\I18n\FrozenDate $employment_date
+ * @property string $image
+ * @property int $role_id
+ * @property int $status_id
+ * @property \Cake\I18n\FrozenTime $created
+ * @property \Cake\I18n\FrozenTime $modified
+ *
+ * @property \App\Model\Entity\Gender $gender
+ * @property \App\Model\Entity\Role $role
+ * @property \App\Model\Entity\Status $status
+ */
+class Employee extends Entity
+{
+    /**
+     * Fields that can be mass assigned using newEntity() or patchEntity().
+     *
+     * Note that when '*' is set to true, this allows all unspecified fields to
+     * be mass assigned. For security purposes, it is advised to set '*' to false
+     * (or remove it), and explicitly make individual fields accessible as needed.
+     *
+     * @var array
+     */
+    protected $_accessible = [
+        'name' => true,
+        'email' => true,
+        'phone_number' => true,
+        'address' => true,
+        'gender_id' => true,
+        'date_of_birth' => true,
+        'qualifications' => true,
+        'salary_amount' => true,
+        'employment_date' => true,
+        'image' => true,
+        'role_id' => true,
+        'status_id' => true,
+        'created' => true,
+        'modified' => true,
+        'gender' => true,
+        'role' => true,
+        'status' => true,
+    ];
+}
